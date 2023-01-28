@@ -1,30 +1,79 @@
-new file 1
-new file 2
-new file 3
-new file 4
-new file 5
-new file 1
-new file 2
-new file 3
-new file 4
-new file 5
-new file 1
-new file 2
-new file 3
-new file 4
-new file 5
-new file 1
-new file 2
-new file 3
-new file 4
-new file 5
-new file 1
-new file 2
-new file 3
-new file 4
-new file 5
-new file 1
-new file 2
-new file 3
-new file 4
+wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+sudo apt update && sudo apt install terraform
+
+
+ wget https://releases.hashicorp.com/terraform/0.13.5/terraform_0.13.5_linux_amd64.zip
+--2020-10-24 11:36:50-- https://releases.hashicorp.com/terraform/0.13.5/terraform_0.13.5_linux_amd64.zip
+Resolving releases.hashicorp.com (releases.hashicorp.com)... 151.101.153.183, 2a04:4e42:24::439
+Connecting to releases.hashicorp.com (releases.hashicorp.com)|151.101.153.183|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 34880173 (33M) [application/zip]
+Saving to: ‘terraform_0.13.5_linux_amd64.zip’
+
+unzip terraform_0.13.5_linux_amd64.zip
+
+
+ wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
+ echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+ sudo apt update && sudo apt install terraform
+
+
+sudo yum install wget
+yum install java-1.8.0-openjdk
+
+https://devops4solutions.com/aws-ec2-linux-instance-launch/
+
+https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-build
+
+>>>
+Terraform install
+=============
+
+[root@ip-172-31-52-114 ~]# echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin
+[root@ip-172-31-52-114 ~]# mv ~/Downloads/terraform /usr/local/bin/
+mv: cannot stat ‘/root/Downloads/terraform’: No such file or directory
+[root@ip-172-31-52-114 ~]#
+
+
+
+1>>
+
+sudo yum install -y yum-utils 
+
+
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+
+
+touch ~/.bashrc
+
+
+
+
+terraform -install-autocomplete
+
+
+sudo yum -y install terraform
+
+for access key and 
+https://us-east-1.console.aws.amazon.com/iamv2/home#/users/details/S3User/create-access-key
+Access key =AKIAVPT5EXLEN6ATV2DH
+export AWS_ACCESS_KEY_ID=AKIAVPT5EXLEN6ATV2DH
+Secret access key =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
+export AWS_SECRET_ACCESS_KEY=7v2lLaOYUCnuEwLtxFq7TpxjjcZ8mQ8YpXziIJWM
+
+
+AMI
+ami-0aa7d40eeae50c9a9
+
+
+terraform show
+
+terraform state list
+
+
+how to identify AWS instnce created manualy and through terraform 
+
+what are difeerent toriblr shoot points
 
